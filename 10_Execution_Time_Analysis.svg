@@ -1,0 +1,34 @@
+# Cell 10: Execution Time Across Circuit Depths
+
+plt.figure(figsize=(8, 5))
+
+plt.plot(
+    comparison_df["Circuit Depth"],
+    comparison_df["Execution_Time_Without_VQA"],
+    marker="o",
+    linewidth=2,
+    label="Without VQA"
+)
+
+plt.plot(
+    comparison_df["Circuit Depth"],
+    comparison_df["Execution_Time_With_VQA"],
+    marker="s",
+    linewidth=2,
+    label="With VQA"
+)
+
+plt.xlabel("Circuit Depth")
+plt.ylabel("Execution Time (seconds)")
+plt.title("Execution Time Across Different Circuit Depths")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+
+plt.savefig(
+    "Figure_3_Execution_Time_VQA.svg",
+    format="svg",
+    bbox_inches="tight"
+)
+
+plt.show()
