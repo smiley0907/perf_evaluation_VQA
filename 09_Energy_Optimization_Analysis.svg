@@ -1,0 +1,41 @@
+# Cell 9: Energy Optimization Across Circuit Depths
+
+plt.figure(figsize=(8, 5))
+
+plt.plot(
+    comparison_df["Circuit Depth"],
+    comparison_df["Energy_Without_VQA"],
+    marker="o",
+    linewidth=2,
+    label="Without VQA"
+)
+
+plt.plot(
+    comparison_df["Circuit Depth"],
+    comparison_df["Energy_With_VQA"],
+    marker="s",
+    linewidth=2,
+    label="With VQA"
+)
+
+plt.axhline(
+    exact_ground_energy,
+    linestyle="--",
+    linewidth=1.5,
+    label="Exact Ground-State Energy"
+)
+
+plt.xlabel("Circuit Depth")
+plt.ylabel("Energy")
+plt.title("Energy Optimization Across Different Circuit Depths")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+
+plt.savefig(
+    "Figure_2_Energy_Optimization_VQA.svg",
+    format="svg",
+    bbox_inches="tight"
+)
+
+plt.show()
