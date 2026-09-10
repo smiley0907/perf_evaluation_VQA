@@ -21,3 +21,14 @@ circuit depth increases.
 - Circuit depths: 3, 6, 9, 12, 15
 - Random seed: 42
 - Maximum optimization iterations: 200
+
+VQA-Circuit-Depth-Study/
+│
+├── README.md
+├── VQA_Circuit_Depth_Analysis.ipynb
+├── figures/
+│   ├── Figure_1_Energy_Error.svg
+│   ├── Figure_2_Energy_Optimization.svg
+│   ├── Figure_3_Execution_Time.svg
+│   └── Figure_4_VQA_Convergence.svg
+└── requirements.txt
