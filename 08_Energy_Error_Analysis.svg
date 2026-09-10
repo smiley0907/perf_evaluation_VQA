@@ -1,0 +1,36 @@
+# Cell 8: Energy Error Across Circuit Depths
+
+plt.figure(figsize=(8, 5))
+
+plt.semilogy(
+    comparison_df["Circuit Depth"],
+    comparison_df["Energy_Error_Without_VQA"],
+    marker="o",
+    linewidth=2,
+    markersize=7,
+    label="Without VQA"
+)
+
+plt.semilogy(
+    comparison_df["Circuit Depth"],
+    comparison_df["Energy_Error_With_VQA"],
+    marker="s",
+    linewidth=2,
+    markersize=7,
+    label="With VQA"
+)
+
+plt.xlabel("Circuit Depth")
+plt.ylabel("Energy Error (log scale)")
+plt.title("Energy Error Across Different Circuit Depths")
+plt.legend()
+plt.grid(True, which="both", alpha=0.3)
+plt.tight_layout()
+
+plt.savefig(
+    "Figure_1_Energy_Error_VQA_vs_Without_VQA.svg",
+    format="svg",
+    bbox_inches="tight"
+)
+
+plt.show()
